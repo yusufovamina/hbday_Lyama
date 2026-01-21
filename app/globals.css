@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --color-lavender: #E6E6FA;
+  --color-lavender-dark: #D8B4FE;
+  --color-baby-blue: #89CFF0;
+  --color-soft-pink: #FFB6C1;
+  --color-hot-pink: #FF69B4;
+  
+  --font-sans: var(--font-nunito);
+  --font-hand: var(--font-pacifico);
+  
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-heart-pop: heart-pop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  @keyframes heart-pop {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
   }
 }
 
+/* Custom Scrollbar Hide */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: white;
+  color: black;
 }
