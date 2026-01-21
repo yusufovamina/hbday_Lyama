@@ -29,7 +29,7 @@ export default function MemoriesStory() {
                 particleCount: 100,
                 spread: 70,
                 origin: { y: 0.6 },
-                shapes: ['heart'],
+                shapes: ['heart' as any],
                 colors: ['#FF69B4', '#FFB6C1', '#E6E6FA']
             });
         }
